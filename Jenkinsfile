@@ -6,6 +6,7 @@ stage('build') {
                 environment {
                   HOME="."
                 }  
+				}
 stage('Maven Install') {
      agent {        
 docker {          
