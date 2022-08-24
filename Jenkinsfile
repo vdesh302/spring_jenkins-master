@@ -3,6 +3,15 @@ pipeline {
   agent none
   stages {  
   
+  	stage('build') {
+                environment {
+                  HOME="."
+                }
+  steps{
+  
+  sh 'mvn --version'
+  }
+}
   
 stage('Maven Install') {
      agent {        
@@ -14,14 +23,6 @@ steps {
       sh 'mvn clean install'
       }
     }
-	stage('build') {
-                environment {
-                  HOME="."
-                }
-  steps{
-  
-  sh 'mvn --version'
-  }
-}
+
    }
 }
