@@ -1,7 +1,11 @@
 #!groovy
 pipeline {
   agent none
-  stages {    
+  stages {  
+stage('build') {
+                environment {
+                  HOME="."
+                }  
 stage('Maven Install') {
      agent {        
 docker {          
