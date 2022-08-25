@@ -3,13 +3,13 @@ pipeline {
   agent none
   stages {  
   
-  	stage('build') {
-                environment {
-                  HOME="."
-                }
+  	stage('build') 
+                
+                
   steps{
+  environment {
+    HOME="."
   
-  ""
   }
 }
   
